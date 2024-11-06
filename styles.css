@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    background: #4d84bb;
+    color: #ecf0f1;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #bd4050;
+}
+
+/* .hero {
+    background-image: url('/pic3.jpg');
+    background-size: cover;
+    min-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    color: rgb(219, 202, 202);
+    padding:10px;
+    position: relative;
+} */
+
+.hero {
+    background-image: url('/pic5.jpg');
+    background-size: cover;
+    background-position: center center; /* Ensures the image is centered */
+    min-height: 200vh; /* Ensures the hero section takes up at least 200% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Changed to center text for better readability on smaller screens */
+    color: rgb(219, 202, 202);
+    padding: 10px;
+    position: relative;
+    overflow: hidden; /* Prevents overflow of content when scaling */
+}
+
+/* Media Query for smaller screens (mobile devices) */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center; /* Ensures text stays centered on small screens */
+        padding: 20px; /* Slightly more padding on mobile */
+        min-height: 100vh; /* Adjust the height for mobile to take up full screen */
+    }
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about, .projects, .skills, .contact {
+    padding: 40px 0;
+    background-color: #c2d7e4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #2980b9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #081721;
+}
+
+.project-card {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    max-width: 15%;
+    border-radius: 8px;
+}
+
+.projects h3{
+  background-color: #1491a1;
+  color: #aa2b2b;
+  font-size: x-large;
+}
+
+.projects p{
+    color: #563fbd;
+    font-size: large;
+    font-size: larger;
+}
+.tags {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #0c340b;
+   font-size: large;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list h3 {
+    background: #aa2b2b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color:#03a9f4 ;
+}
+.contact button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #1b5b85;
+}
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
